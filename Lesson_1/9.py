@@ -4,3 +4,11 @@
 a = int(input('Введите первое число:\n'))
 b = int(input('Введите второе число:\n'))
 c = int(input('Введите третье число:\n'))
+
+if (b < a < c) or (b > a > c):
+    result = a
+elif (a < b < c) or (a > b > c):
+    result = b
+else:
+    result = c
+print(f'среднее число: {result}')
