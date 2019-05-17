@@ -4,10 +4,8 @@
 start_postition_alphabet = ord('a')
 symbol_1 = ord(input(f'Введите первую букву:\n')) - start_postition_alphabet + 1
 symbol_2 = ord(input(f'Введите вторую букву:\n')) - start_postition_alphabet + 1
-if symbol_2 > symbol_1:
-    result = symbol_2 - symbol_1 - 1
-elif symbol_1 > symbol_2:
-    result = symbol_1 - symbol_2 - 1
+if symbol_1 - symbol_2 != 0:
+    result = abs(symbol_1 - symbol_2) - 1
 else:
     result = 0
 print(f'Позиция первой буквы в алфавите: {symbol_1}\n'
