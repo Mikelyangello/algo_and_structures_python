@@ -2,8 +2,8 @@
 
 digit = int(input('Введите трехзначное число: '))
 a = digit % 10
-b = (digit - a) / 10 % 10
-c = (digit - a - b * 10) / 100 % 10
+b = digit // 10 % 10
+c = digit // 100 % 10
 result_summ = a + b + c
 result_mult = a * b * c
 print(f'Ваше число {digit}, имеет следующие результаты:\n'
