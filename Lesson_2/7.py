@@ -12,9 +12,7 @@ def check_expression(n, left=0, counter=1):
         left += counter
         counter += 1
         return check_expression(n, left, counter)
-    if left == n * (n + 1) / 2:
-        return print('Равенство существует')
-    return print('Равенство не существует')
+    return print(f'Равенство существует? {left == n * (n + 1) / 2}')
 
 
 check_expression(n)
