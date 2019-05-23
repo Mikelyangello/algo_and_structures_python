@@ -5,3 +5,12 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+
+example_arr = [8, 3, 15, 6, 4, 2, ]
+result_arr = []
+
+for i in example_arr:
+    if i % 2 == 0:
+        result_arr.append(example_arr.index(i) + 1)
+
+print(f'\nВ массиве {example_arr}\nесть четные числа на позициях: {result_arr}')
