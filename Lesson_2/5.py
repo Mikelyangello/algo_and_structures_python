@@ -14,7 +14,7 @@ def output(code=32, text='', counter=0):
         print(text)
         text = ''
         counter = 0
-    text += f'{code}-{chr(code)}  '
+    text += f'{code:>3} - {chr(code):4}  '
     code += 1
     counter += 1
     return output(code, text, counter)
