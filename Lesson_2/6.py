@@ -28,7 +28,7 @@ def extrasens(counter=1, secret_number=None):
         print('Загаданное число меньше')
     else:
         print('Загаданное число больше')
-    counter += 1
-    return extrasens(counter, secret_number)
+    return extrasens(counter+1, secret_number)
+
 
 extrasens()
