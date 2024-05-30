@@ -4,7 +4,7 @@
 (4, 6 и 0) и 2 нечетные (3 и 5).
 """
 
-number = int(input('Введите натуральное число:\n'))
+number = input('Введите натуральное число:\n')
 
 odd_count = 0
 even_count = 0
@@ -21,4 +21,16 @@ def counter(n, odd_count, even_count):
     return counter(n, odd_count, even_count)
 
 
-counter(number, odd_count, even_count)
+counter(int(number), odd_count, even_count)
+
+def another_counter(num, i, od=0, ev=0):
+    if i==0:
+        return print(f"Число {num} содержит {ev} четных и {od} нечетных цифр")
+    if int(num[i-1]) % 2 == 0:
+        ev += 1
+    else:
+        od += 1
+    return another_counter(num, i-1, od, ev)
+
+
+another_counter(number, len(number))
