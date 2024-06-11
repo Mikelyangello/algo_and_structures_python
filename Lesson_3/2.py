@@ -5,3 +5,11 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+
+list_of_numbers = [8, 3, 15, 6, 4, 2]
+result = []
+for i in range(len(list_of_numbers)):
+    if list_of_numbers[i] % 2 == 0:
+        result.append(i)
+
+print(result)
