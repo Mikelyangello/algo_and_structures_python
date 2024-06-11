@@ -14,10 +14,10 @@ def summer(number, summ):
     return summer(number // 10, summ)
 
 
-def best_of_number(numbers):
+def best_of_number(nums):
     result = 0
     max = 0
-    for i in numbers:
+    for i in nums:
         max_summ = summer(int(i), 0)
         if max_summ > result:
             result = max_summ
