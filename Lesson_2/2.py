@@ -6,31 +6,26 @@
 
 number = input('Введите натуральное число:\n')
 
-odd_count = 0
-even_count = 0
 
-
-def counter(n, odd_count, even_count):
-    if n == 0:
-        return print(f'Число {number} содержит {even_count} четных и {odd_count} нечетных цифр')
-    if n % 10 % 2 == 0:
-        even_count += 1
+def counter(n, i, od=0, ev=0):
+    if i == 0:
+        return print(f'Число {n} содержит {ev} четных и {od} нечетных цифр')
+    if i % 10 % 2 == 0:
+        return counter(n, i // 10, od, ev + 1)
     else:
-        odd_count += 1
-    n = (n - n % 10) / 10
-    return counter(n, odd_count, even_count)
+        return counter(n, i // 10, od + 1, ev)
 
 
-counter(int(number), odd_count, even_count)
+counter(int(number), int(number))
+
 
 def another_counter(num, i, od=0, ev=0):
-    if i==0:
+    if i == 0:
         return print(f"Число {num} содержит {ev} четных и {od} нечетных цифр")
     if int(num[i-1]) % 2 == 0:
-        ev += 1
+        return another_counter(num, i - 1, od, ev + 1)
     else:
-        od += 1
-    return another_counter(num, i-1, od, ev)
+        return another_counter(num, i - 1, od + 1, ev)
 
 
 another_counter(number, len(number))
